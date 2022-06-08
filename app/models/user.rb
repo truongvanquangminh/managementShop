@@ -3,11 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable, :recoverable, :rememberable
   devise :database_authenticatable, :registerable,
          :validatable, :trackable
-  belongs_to :role
+  belongs_to :role, optional: true
   validates :name, presence: true
   before_save :assign_role
 
-  has_many :users, dependent: :restrict_with_exception
+  # has_many :users, dependent: :restrict_with_exception
 
   def assign_role
     self.role = Role.find_by name: 'User' if role.nil?
