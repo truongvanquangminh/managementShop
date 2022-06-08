@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
+
     if @user.save
       redirect_to @user, notice: 'User was successfully created.'
     else
@@ -70,6 +71,8 @@ class UsersController < ApplicationController
         :password,
         :password_confirmation,
         :name,
+        :phone,
+        :address,
         :role_id
       )
     end
