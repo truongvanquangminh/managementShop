@@ -18,22 +18,8 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/new
-  def new
-  end
-
   # GET /users/1/edit
   def edit
-  end
-
-  # POST /users
-  def create
-
-    if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
-    else
-      render :new
-    end
   end
 
   # PATCH/PUT /users/1

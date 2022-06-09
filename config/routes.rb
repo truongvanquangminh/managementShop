@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :roles
-  resources :users
+  # resources :users
 
   root to: 'pages#home'
 end
