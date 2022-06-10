@@ -20,4 +20,12 @@ class User < ApplicationRecord
   def user?
     role.name == 'User'
   end
+
+  def self.search(term)
+    if term
+      where('name LIKE ?', "%#{term}%")
+    else
+      all
+    end
+  end
 end
