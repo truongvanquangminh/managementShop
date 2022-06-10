@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    @users = User.search(params[:term])
   end
 
   # GET /users/1
@@ -53,6 +53,7 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(
+        :term,
         :email,
         :password,
         :password_confirmation,
