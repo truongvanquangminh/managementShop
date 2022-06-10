@@ -1,0 +1,30 @@
+<div class="product-big-title-area">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="product-bit-title text-center">
+                  <h2>Editing Category</h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="single-product-area">
+  <div class="zigzag-bottom"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h1>Editing category</h1>
+
+      <%= render "form", category: @category %>
+
+      <br>
+
+      <div>
+        <%= link_to "Show this category", @category %> |
+        <%= link_to "Back to categories", categories_path %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
