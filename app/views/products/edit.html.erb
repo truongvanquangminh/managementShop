@@ -1,0 +1,19 @@
+<div class="single-product-area">
+  <div class="zigzag-bottom"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h1>Editing product</h1>
+
+      <%= render "form", product: @product %>
+
+      <br>
+
+      <div>
+        <%= link_to "Show this product", @product %> |
+        <%= link_to "Back to products", products_path %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
