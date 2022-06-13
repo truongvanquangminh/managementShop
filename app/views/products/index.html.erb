@@ -1,0 +1,49 @@
+<div class="product-big-title-area">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="product-bit-title text-center">
+                  <h2>Magage Product</h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="single-product-area">
+  <div class="zigzag-bottom"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <p style="color: green"><%= notice %></p>
+
+      <h1>Products</h1>
+
+      <table class="shop_table cart">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Image</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @products.each do |product| %>
+            <tr class="cart_item">
+              <td><%= product.name %></td>
+              <td><%= product.price %></td>
+              <td><%= product.qty %></td>
+              <td><%= image_tag(product.image, style:'width:100px') %></td>
+              <td><%= link_to 'Edit', edit_product_path(product) %></td>
+              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <%= link_to "New product", new_product_path, :class => 'wid-view-more' %>
+    </div>
+  </div>
+</div>
