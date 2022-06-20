@@ -11,3 +11,9 @@ r2 = Role.create({ name: 'Admin', description: 'Can perform any CRUD operation o
 
 u1 = User.create({ name: 'minh', email: 'minh@gmail.com', password: 'minhminh', password_confirmation: 'minhminh', role_id: r1.id })
 u4 = User.create({ name: 'admin', email: 'admin@gmail.com', password: 'adminadmin', password_confirmation: 'adminadmin', role_id: r2.id })
+
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"

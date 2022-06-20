@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
     @q = Product.ransack(params[:q])
     @products = @q.result(distinct: true)
+    @order_item = current_order.order_items.new
   end
 
   def productDetail
