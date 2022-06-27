@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get '/productDetail/:id' => "pages#productDetail"
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
 end

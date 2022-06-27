@@ -1,0 +1,25 @@
+<div class="single-product">
+    <div class="product-f-image">
+                                    
+            <%= image_tag(product.image, style: 'height: 264px')%>
+        <div class="product-hover">
+            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+            <a href="/productDetail/<%= product.id %>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+        </div>
+    </div>
+                                
+    <h2><a href=""><%= product.name %></a></h2>
+                                
+    <div class="product-carousel-price">
+        <%= form_for order_item, remote: true do |f| %>
+        <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
+            <div class="input-group">
+            <%= f.number_field :quantity, value: 1, class: "form-control input-height", min: 1 %>
+            <div class="input-group-btn">
+                <%= f.hidden_field :product_id, value: product.id %>
+                <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+            </div>
+            </div>
+        <% end %>
+    </div> 
+</div>
