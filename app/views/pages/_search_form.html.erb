@@ -1,0 +1,11 @@
+<%= search_form_for @q, url: url_for(controller: 'pages', action: 'home'), remote: true do |f| %>
+    <%= f.label :name %>
+    <%= f.search_field :name_cont %>
+
+    <%= f.label :price_gteq, "Price between" %>
+    <%= f.text_field :price_gteq %>
+    <%= f.label :price_lteq, "and" %>
+    <%= f.text_field :price_lteq %>
+
+    <%= f.submit "Search!" %>
+<% end %>

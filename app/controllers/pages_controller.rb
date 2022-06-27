@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @products = Product.search(params[:term])
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true)
   end
 end
