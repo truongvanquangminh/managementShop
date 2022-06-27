@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # resources :users
 
   root to: 'pages#home'
+  get '/productDetail/:id' => "pages#productDetail"
 end
