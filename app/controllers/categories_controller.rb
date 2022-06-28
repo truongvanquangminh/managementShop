@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.search(params[:term])
+    @categories = Category.search(params[:term]).paginate(:page => params[:page], :per_page => 5).order('created_at ASC')
   end
 
   # GET /categories/1 or /categories/1.json

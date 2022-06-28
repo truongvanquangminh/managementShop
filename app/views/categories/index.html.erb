@@ -40,6 +40,8 @@
         </tbody>
       </table>
       <%= link_to "New category", new_category_path, :class => 'wid-view-more'%>
+
+      <p><%= will_paginate @categories %></p>
     </div>
   </div>
 </div>

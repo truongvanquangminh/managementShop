@@ -49,6 +49,7 @@ gem "devise"
 gem "cancancan"
 gem 'turbolinks'
 gem "ransack"
+gem "will_paginate", ">= 3.0"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

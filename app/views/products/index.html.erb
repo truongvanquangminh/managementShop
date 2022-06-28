@@ -47,6 +47,8 @@
       </table>
 
       <%= link_to "New product", new_product_path, :class => 'wid-view-more' %>
+
+      <p><%= will_paginate @products %></p>
     </div>
   </div>
 </div>
