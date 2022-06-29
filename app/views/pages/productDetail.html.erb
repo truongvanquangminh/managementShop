@@ -60,17 +60,15 @@
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                                 <h2>Reviews</h2>
-                                                <div class="submit-review">
-                                                    <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-                                                    <p><input type="submit" value="Submit"></p>
-                                                </div>
+                                                <%= render @product.comments %>
+                                                <%= render 'comments/form' %>
                                             </div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>      
             </div> 
         </div>

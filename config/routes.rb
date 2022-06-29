@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   get '/productDetail/:id' => "pages#productDetail"
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
+
+  resources :products do
+    resources :comments
+  end
 end
