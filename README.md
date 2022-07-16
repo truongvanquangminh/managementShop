@@ -1,6 +1,7 @@
 # managementShop
 
 * Ruby version 2.7.1
++ Rail version 7.0.3
 
 + gem devise
 + gem cancancan
@@ -17,4 +18,4 @@
 
 * Deployment instructions
 
-* ...
+* Link plan: https://bit.ly/3uQ3tXm
