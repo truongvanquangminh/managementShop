@@ -1,0 +1,11 @@
+<%= form_with(model: [ @product, @product.comments.build ]) do |form| %>
+<div class="submit-review">
+    <p><label for="review">Your review</label>
+        <%= form.text_field :content %>
+        <%= form.hidden_field :user_id, value: current_user.id %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+</div>
+<% end %>

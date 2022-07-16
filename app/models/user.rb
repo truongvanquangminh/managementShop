@@ -6,6 +6,7 @@ class User < ApplicationRecord
   belongs_to :role, optional: true
   validates :name, presence: true
   before_save :assign_role
+  has_many :comments
 
   # has_many :users, dependent: :restrict_with_exception
 
