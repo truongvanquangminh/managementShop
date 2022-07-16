@@ -7,8 +7,6 @@ class PagesController < ApplicationController
 
   def productDetail
     @product = Product.find(params[:id])
-    if @product.nil?
-      redirect_to action: :index
-    end
+
   end
 end
